@@ -6,6 +6,10 @@
     "nice-color-palettes": "^3.0.0",
     "three": "^0.144.0"
   },
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
   "devDependencies": {
     "@parcel/transformer-glsl": "^2.7.0"
   }
