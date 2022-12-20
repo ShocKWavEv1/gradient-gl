@@ -7,10 +7,11 @@
     "three": "^0.144.0"
   },
   "scripts": {
-    "start": "parcel",
-    "build": "parcel build"
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "devDependencies": {
-    "@parcel/transformer-glsl": "^2.7.0"
+    "@parcel/transformer-glsl": "^2.8.2",
+    "parcel": "^2.8.2"
   }
 }
