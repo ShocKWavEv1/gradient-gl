@@ -546,17 +546,18 @@ var _lilGui = require("lil-gui");
 var _lilGuiDefault = parcelHelpers.interopDefault(_lilGui);
 var _gsap = require("gsap");
 var _gsapDefault = parcelHelpers.interopDefault(_gsap);
-var colors = require("65e8055330db20db");
+var colors = require("d4aa901c96a39890");
 let ind = Math.floor(Math.random() * colors.length);
 // ind = 19;
 console.log(ind);
 let pallete = [
-    "#410041",
-    "#25001b",
-    "#d50018",
-    "#0e003f",
-    "#d50018"
+    "#4820f2",
+    "#22228b",
+    "#22228b",
+    "#DB286A",
+    "#0e003f"
 ];
+// ["#410041", "#25001b", "#d50018", "#0e003f", "#d50018"]
 pallete = pallete.map((color)=>new _three.Color(color));
 console.log(pallete);
 class Sketch {
@@ -664,7 +665,7 @@ new Sketch({
     dom: document.getElementById("container")
 });
 
-},{"three":"ktPTu","three/examples/jsm/controls/OrbitControls.js":"7mqRv","three/examples/jsm/loaders/GLTFLoader.js":"dVRsF","three/examples/jsm/loaders/DRACOLoader.js":"lkdU4","./shader/fragment.glsl":"501kY","./shader/vertex.glsl":"7aGpr","lil-gui":"fkEfG","gsap":"fPSuC","65e8055330db20db":"4B77H","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ktPTu":[function(require,module,exports) {
+},{"three":"ktPTu","three/examples/jsm/controls/OrbitControls.js":"7mqRv","three/examples/jsm/loaders/GLTFLoader.js":"dVRsF","three/examples/jsm/loaders/DRACOLoader.js":"lkdU4","./shader/fragment.glsl":"501kY","./shader/vertex.glsl":"7aGpr","lil-gui":"fkEfG","gsap":"fPSuC","d4aa901c96a39890":"4B77H","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ktPTu":[function(require,module,exports) {
 /**
  * @license
  * Copyright 2010-2022 Three.js Authors

@@ -11,7 +11,9 @@ var colors = require('nice-color-palettes');
 let ind = Math.floor(Math.random() * colors.length)
 // ind = 19;
 console.log(ind)
-let pallete = ["#410041", "#25001b", "#d50018", "#0e003f", "#d50018"];
+
+let pallete = ["#4820f2", "#22228b", "#22228b", "#DB286A", "#0e003f"];
+// ["#410041", "#25001b", "#d50018", "#0e003f", "#d50018"]
 
 
 
