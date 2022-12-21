@@ -11,7 +11,7 @@ var colors = require('nice-color-palettes');
 let ind = Math.floor(Math.random() * colors.length)
 // ind = 19;
 console.log(ind)
-let pallete = ["#410041", "#25001b", "#0e003f", "#0e003f", "#d50018"];
+let pallete = ["#410041", "#25001b", "#d50018", "#0e003f", "#d50018"];
 
 
 
@@ -137,7 +137,7 @@ export default class Sketch {
 
   render() {
     if (!this.isPlaying) return;
-    this.time += 0.0001;
+    this.time += 0.0002;
     this.material.uniforms.time.value = this.time;
     requestAnimationFrame(this.render.bind(this));
     this.renderer.render(this.scene, this.camera);
