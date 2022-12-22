@@ -553,7 +553,7 @@ console.log(ind);
 let pallete = [
     "#4820f2",
     "#22228b",
-    "#22228b",
+    "#DB286A",
     "#DB286A",
     "#0e003f"
 ];
