@@ -7,20 +7,30 @@ import vertex from "./shader/vertex.glsl";
 import GUI from 'lil-gui'; 
 import gsap from "gsap";
 
+const querystring = window.location.search
+const params = new URLSearchParams(querystring)
+
+let palleteGL = []
+
+const cleanPalleteGL = []
+
+for (const [key, value] of params) {
+    palleteGL = value.split(',')
+}
+
+palleteGL.forEach((item) => {
+  cleanPalleteGL.push(`#${item}`)
+})
+
 var colors = require('nice-color-palettes');
 let ind = Math.floor(Math.random() * colors.length)
 // ind = 19;
-console.log(ind)
 
-let pallete = ["#4820f2", "#22228b", "#DB286A", "#DB286A", "#0e003f"];
+let pallete = cleanPalleteGL;
+// ["#4820f2", "#22228b", "#DB286A", "#DB286A", "#0e003f"]
 // ["#410041", "#25001b", "#d50018", "#0e003f", "#d50018"]
 
-
-
 pallete = pallete.map((color) => new THREE.Color(color))
-console.log(pallete);
-
-
 
 export default class Sketch {
   constructor(options) {
