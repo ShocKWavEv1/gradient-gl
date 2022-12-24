@@ -12,15 +12,19 @@ const params = new URLSearchParams(querystring)
 
 let palleteGL = []
 
-const cleanPalleteGL = []
+let cleanPalleteGL = []
 
-for (const [key, value] of params) {
-    palleteGL = value.split(',')
+if(querystring === ''){
+  cleanPalleteGL = ["#4820f2", "#22228b", "#DB286A", "#DB286A", "#0e003f"]
+} else {
+  for (const [key, value] of params) {
+      palleteGL = value.split(',')
+  }
+
+  palleteGL.forEach((item) => {
+    cleanPalleteGL.push(`#${item}`)
+  })
 }
-
-palleteGL.forEach((item) => {
-  cleanPalleteGL.push(`#${item}`)
-})
 
 var colors = require('nice-color-palettes');
 let ind = Math.floor(Math.random() * colors.length)
