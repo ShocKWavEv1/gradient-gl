@@ -14,6 +14,8 @@ let palleteGL = []
 
 let cleanPalleteGL = []
 
+const isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
+
 if(querystring === ''){
   cleanPalleteGL = ["#4820f2", "#22228b", "#DB286A", "#DB286A", "#0e003f"]
 } else {
@@ -153,7 +155,7 @@ export default class Sketch {
 
   render() {
     if (!this.isPlaying) return;
-    this.time += 0.0003;
+    this.time += isChrome === true ? 0.0002 : 0.0004;
     this.material.uniforms.time.value = this.time;
     requestAnimationFrame(this.render.bind(this));
     this.renderer.render(this.scene, this.camera);
